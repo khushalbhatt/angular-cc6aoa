@@ -1,0 +1,11 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Enter the number of seats you want to book
+  <input type="number" [(ngModel)]="NoOfSeats" max="7" min="0" maxlength="1" />
+</p>
+<p>
+  Please click on the Register to book the seats
+  <button (click)="BookTickets()">Register</button>
+</p>
+<p *ngIf="booked && !booked1">{{ NoOfSeats1 }} Seats have been booked</p>
+<p *ngIf="booked1 && !booked">Cannot book the seats</p>
